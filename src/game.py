@@ -59,13 +59,6 @@ class Game:
             hole.update()
             forest.update()
 
-            if car.car_rect.colliderect(hole.hole_rect):
-                self.crash_sound.play()
-                self.draw_text("Игра окончена", 64, BLACK, self.WIDTH//3, self.HEIGHT//3)
-                pygame.display.update()
-                pygame.time.delay(2000)  # Подождите 2 секунды перед выходом
-                running = False
-
             pygame.display.update()
             self.clock.tick(60)
 
